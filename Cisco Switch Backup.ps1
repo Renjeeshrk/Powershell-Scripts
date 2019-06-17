@@ -1,12 +1,20 @@
 ﻿
+ # Script info    :  Network Switch Automated Backup using SSH and TFTP
+# Script          :  Network_switch_auto_backup.ps1
+# Verified on     :  Cisco(iOS)
+# Version         :  V-1.0
+# Last Modified   :  5/12/2019
+# The Script can be used for the configuration backup of network devices which are accessible via ssh.
+# .SYNOPSIS
+################################################################################
 #import posh-ssh
 Import-Module -name posh-ssh
  
-# globals
+# Globals
 $today = Get-Date -Format "ddMMyyy"
 $month = Get-Date -Format MMMM
 $year = Get-Date -Format "yyyy"
-$tftp_server = "10.180.65.151"
+$tftp_server = "xx.xx.xx.xx"
  
 # create a folder for every year
 Get-Item "C:\Users\Test\Desktop\RK\$year\" -ErrorAction SilentlyContinue
